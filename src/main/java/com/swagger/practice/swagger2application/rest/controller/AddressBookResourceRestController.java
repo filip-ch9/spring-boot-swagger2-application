@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.swagger.practice.swagger2application.model.Contact;
-import com.swagger.practice.swagger2application.services.ContactService;
+import com.swagger.practice.swagger2application.repositories.ContactRepository;
 
 
 @RestController
@@ -21,26 +21,26 @@ import com.swagger.practice.swagger2application.services.ContactService;
 public class AddressBookResourceRestController {
 	
 	@Autowired
-	private ContactService contactService;
+	private ContactRepository contactRepository;
 	
 	@GetMapping("/{id}")
 	public Optional<Contact> getContact(@PathVariable Long id) {
-		return contactService.getById(id);
+		return contactRepository.findById(id);
 	}
 	
-	@GetMapping()
+	@GetMapping("/")
 	public List<Contact> getAllContacts() {
-		return contactService.listAll();
+		return contactRepository.findAll();
 	}
 	
-	@PostMapping()
+	@PostMapping("/")
 	public Contact addContact(@RequestBody Contact contact) {
-		return contactService.saveOrUpdate(contact);
+		return contactRepository.save(contact);
 	}
 	
 	@DeleteMapping(value = "/{id}")
 	public void deleteContact(@PathVariable("id") Long id) {
-		contactService.delete(id);
+		contactRepository.deleteById(id);
 	}
 	
 }
