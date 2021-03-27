@@ -15,7 +15,7 @@ run the application
 go to your localhost port and add this - swagger-ui.html # you should be able to see the swagger ui 
 write crud operations # try out the methods 
 
-to import the project into postman copy the same url
+to import the project into postman copy the url under [ Base URL: TOURLOCALHOST ] 
 open postman app select import and select link
 paste the url and that's it # play around with different inputs and tests
 
