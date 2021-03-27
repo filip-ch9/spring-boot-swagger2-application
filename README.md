@@ -19,6 +19,9 @@ to import the project into postman copy the same url
 open postman app select import and select link
 paste the url and that's it # play around with different inputs and tests
 
+run maven clean install and you can find html documentation inside 
+# target/generated-sources/swagger/swagger-html/index.html 
+
 ```
 
 ## Contributing
