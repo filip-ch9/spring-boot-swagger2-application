@@ -1,10 +1,10 @@
-package com.swagger.practice.swagger2application;
+package com.swagger.practice.demo.application;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Swagger2applicationApplicationTests {
+class DemoApplicationTests {
 	
 	@Test
 	void contextLoads() {
