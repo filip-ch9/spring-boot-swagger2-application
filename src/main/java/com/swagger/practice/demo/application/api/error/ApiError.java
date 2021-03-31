@@ -1,4 +1,4 @@
-package com.swagger.practice.swagger2application.api.error;
+package com.swagger.practice.demo.application.api.error;
 
 public class ApiError {
 	

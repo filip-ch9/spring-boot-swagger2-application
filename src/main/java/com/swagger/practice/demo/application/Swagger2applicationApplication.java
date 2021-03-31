@@ -1,4 +1,4 @@
-package com.swagger.practice.swagger2application;
+package com.swagger.practice.demo.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

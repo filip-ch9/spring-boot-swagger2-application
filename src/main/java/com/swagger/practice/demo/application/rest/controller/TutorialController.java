@@ -1,4 +1,4 @@
-package com.swagger.practice.swagger2application.rest.controller;
+package com.swagger.practice.demo.application.rest.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.datastax.oss.driver.api.core.uuid.Uuids;
-import com.swagger.practice.swagger2application.model.Tutorial;
-import com.swagger.practice.swagger2application.repositories.TutorialRepository;
+import com.swagger.practice.demo.application.model.Tutorial;
+import com.swagger.practice.demo.application.repositories.TutorialRepository;
 
 @CrossOrigin(origins = "http://localhost:9000")
 @RestController

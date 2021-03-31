@@ -1,4 +1,4 @@
-package com.swagger.practice.swagger2application.repositories;
+package com.swagger.practice.demo.application.repositories;
 
 import java.util.List;
 import java.util.UUID;
@@ -6,7 +6,7 @@ import java.util.UUID;
 import org.springframework.data.cassandra.repository.AllowFiltering;
 import org.springframework.data.cassandra.repository.CassandraRepository;
 
-import com.swagger.practice.swagger2application.model.Tutorial;
+import com.swagger.practice.demo.application.model.Tutorial;
 
 public interface TutorialRepository extends CassandraRepository<Tutorial, UUID> {
 	  @AllowFiltering

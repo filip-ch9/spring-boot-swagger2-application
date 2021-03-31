@@ -1,4 +1,4 @@
-package com.swagger.practice.swagger2application.rest.controller;
+package com.swagger.practice.demo.application.rest.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.swagger.practice.swagger2application.model.Contact;
-import com.swagger.practice.swagger2application.repositories.ContactRepository;
+import com.swagger.practice.demo.application.model.Contact;
+import com.swagger.practice.demo.application.repositories.ContactRepository;
 
 @RestController
 @RequestMapping(value = "/api-contacts")

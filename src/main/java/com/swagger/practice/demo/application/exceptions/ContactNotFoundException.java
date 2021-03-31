@@ -1,4 +1,4 @@
-package com.swagger.practice.swagger2application.exceptions;
+package com.swagger.practice.demo.application.exceptions;
 
 @SuppressWarnings("serial")
 public class ContactNotFoundException extends RuntimeException {

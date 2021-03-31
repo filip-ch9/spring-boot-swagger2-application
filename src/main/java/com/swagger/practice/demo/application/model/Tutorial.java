@@ -1,4 +1,4 @@
-package com.swagger.practice.swagger2application.model;
+package com.swagger.practice.demo.application.model;
 
 import java.util.UUID;
 

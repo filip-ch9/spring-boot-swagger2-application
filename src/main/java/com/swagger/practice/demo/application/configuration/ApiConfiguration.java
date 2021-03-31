@@ -1,4 +1,4 @@
-package com.swagger.practice.swagger2application.configuration;
+package com.swagger.practice.demo.application.configuration;
 
 import org.springdoc.core.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
