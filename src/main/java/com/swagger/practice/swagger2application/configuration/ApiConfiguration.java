@@ -1,46 +1,43 @@
 package com.swagger.practice.swagger2application.configuration;
 
+import org.springdoc.core.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import springfox.documentation.builders.ApiInfoBuilder;
-import springfox.documentation.service.ApiInfo;
-import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger.web.UiConfiguration;
-import springfox.documentation.swagger.web.UiConfigurationBuilder;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
-import static springfox.documentation.builders.PathSelectors.regex;
+import io.swagger.v3.oas.models.ExternalDocumentation;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.License;
 
 @Configuration
-@EnableSwagger2
-public class ApiConfiguration {    
-	
-    @Bean
-    public Docket docket(ApiInfo apiInfo) { 
-        return new Docket(DocumentationType.SWAGGER_2)
-          .groupName("contact-api")
-          .useDefaultResponseMessages(false)
-          .apiInfo(apiInfo())
-          .select().paths(regex("/api/.*"))                         
-          .build();                                           
-    }
-    
-    @Bean
-    public ApiInfo apiInfo() {
-    	return new ApiInfoBuilder()
-    			.title("Address Book")
-    			.description("API for fetching contact related information")
-    			.version("1.0.0")
-    			.build();
-    }
-    
-    @Bean
-    public UiConfiguration uiConfiguration() {
-    	return UiConfigurationBuilder.builder()
-    			.deepLinking(true)
-    			.validatorUrl(null)
-    			.build();
-    }
+public class ApiConfiguration {
+
+	 @Bean
+	  public GroupedOpenApi contactApi() {
+	      return GroupedOpenApi.builder()
+	              .group("demo-contacts")
+	              .pathsToMatch("/api-contacts/**")
+	              .build();
+	  }
+	 
+	 @Bean
+	  public GroupedOpenApi tutorialsApi() {
+	      return GroupedOpenApi.builder()
+	              .group("demo-tutorials")
+	              .pathsToMatch("/api-tutorials/**")
+	              .build();
+	  }
+
+	 @Bean
+	  public OpenAPI springShopOpenAPI() {
+	      return new OpenAPI()
+	              .info(new Info().title("SpringShop API")
+	              .description("Spring shop sample application")
+	              .version("v0.0.1")
+	              .license(new License().name("Apache 2.0").url("http://springdoc.org")))
+	              .externalDocs(new ExternalDocumentation()
+	              .description("SpringShop Wiki Documentation")
+	              .url("https://springshop.wiki.github.org/docs"));
+	  }
+
 }

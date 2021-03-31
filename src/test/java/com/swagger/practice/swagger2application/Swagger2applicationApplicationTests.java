@@ -1,47 +1,13 @@
 package com.swagger.practice.swagger2application;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.Writer;
-
-import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Import;
-import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import com.swagger.practice.swagger2application.configuration.ApiConfiguration;
-import com.swagger.practice.swagger2application.repositories.ContactRepository;
-
-@WebMvcTest
-@Import(ApiConfiguration.class)
-@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest
 class Swagger2applicationApplicationTests {
 	
-	@Autowired
-	private MockMvc mockMvc;
-	@MockBean
-	private ContactRepository repository;
-
 	@Test
-	public void swaggerJsonExists() throws Exception {
-		String contentAsString = mockMvc
-			.perform(MockMvcRequestBuilders.get("/v2/api-docs")
-					.accept(MediaType.APPLICATION_JSON)
-					.param("group", "contact-api"))
-			.andExpect(status().isOk())
-			.andReturn()
-			.getResponse().getContentAsString();
-		try (Writer writer = new FileWriter(new File("target/generated-sources/swagger.json"))) {
-			IOUtils.write(contentAsString, writer);
-		}
+	void contextLoads() {
 	}
+	
 }
