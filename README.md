@@ -11,7 +11,8 @@ Most simple basic spring boot application, openAPI 3 confoguration (basic), conn
 ```python
 
 open cassandra bin folder and start cmd in that directory # write the next word to start cassandra: cassandra
-open new cmd in that directory and write cqlsh # use this to create keyspace [create keyspace yourDatabaseName with replication={'class':'SimpleStrategy', 'replication_factor':1};
+open new cmd in that directory and write # cqlsh
+create keyspace # [create keyspace yourDatabaseName with replication={'class':'SimpleStrategy', 'replication_factor':1};
 open mariadb directory start cmd there and type # mysql -u root -p 
 next on the same cmd terminal write # create 
 run the application 
