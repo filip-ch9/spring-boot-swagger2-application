@@ -48,4 +48,6 @@ public class Contact {
 		this.city = city;
 	}
 	
+	
+	
 }
