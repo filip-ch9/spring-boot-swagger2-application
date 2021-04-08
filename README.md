@@ -25,6 +25,8 @@ write crud operations # try out the methods database demoApplication
 to import the project into postman copy the url  
 open postman app select import and select link
 paste the url and that's it # play around with different inputs and tests
+
+to generate pdf document go to # localhost:9000 and print the generated pdf 
  
 ```
 
