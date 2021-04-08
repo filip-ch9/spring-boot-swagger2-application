@@ -1,5 +1,5 @@
 # Spring Boot application using openAPI 3 
-Most simple basic spring boot application, openAPI 3 confoguration (basic), connection to mariadb, workbench, cassandra and postman
+Most simple basic spring boot application, openAPI 3 configuration (basic), connection to mariadb, workbench, cassandra and postman
 
 ## Installation 
 
