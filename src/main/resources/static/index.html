@@ -1,21 +1,17 @@
 <!doctype html>
-  <html>
-  <head>
-    <script src="https://unpkg.com/rapipdf/dist/rapipdf-min.js"></script>
-  </head>
-  <body>
-    <rapi-pdf
-      style = "width:700px; height:40px; font-size:18px;" 
-      spec-url = "http://localhost:9000/v3/api-docs/api-contacts"
-      
-      button-bg = "#b44646" 
-    > </rapi-pdf>
-    <rapi-pdf
-      style = "width:700px; height:40px; font-size:18px;" 
-      spec-url = "http://localhost:9000/v3/api-docs/api-tutorials"
-      
-      button-bg = "#b44646" 
-    > </rapi-pdf>
-    
-  </body> 
+<html>
+<head>
+<script src="https://unpkg.com/rapipdf/dist/rapipdf-min.js"></script>
+</head>
+<body>
+	<rapi-pdf style="width:700px; height:40px; font-size:18px;"
+		spec-url="http://localhost:9000/v3/api-docs/api-contacts"
+		button-bg="#b44646"> </rapi-pdf>
+		
+	<rapi-pdf style="width:700px; height:40px; font-size:18px;"
+		spec-url="http://localhost:9001/v3/api-docs/api-tutorials"
+		button-bg="#b44646"> </rapi-pdf>
+
+</body>
+
 </html>

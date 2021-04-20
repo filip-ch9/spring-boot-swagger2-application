@@ -8,7 +8,6 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,13 +22,15 @@ import com.datastax.oss.driver.api.core.uuid.Uuids;
 import com.swagger.practice.demo.application.model.Tutorial;
 import com.swagger.practice.demo.application.repositories.TutorialRepository;
 
-@CrossOrigin(origins = "http://localhost:9000")
+import io.swagger.v3.oas.annotations.tags.Tag;
+
+@Tag(name = "Tutorial", description = "Tutorial Controller")
 @RestController
 @RequestMapping("/tutorials")
 public class TutorialController {
 
 	@Autowired
-	TutorialRepository tutorialRepository;
+	private TutorialRepository tutorialRepository;
 
 	@GetMapping("/")
 	public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {

@@ -17,9 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.swagger.practice.demo.application.model.Contact;
 import com.swagger.practice.demo.application.repositories.ContactRepository;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
+@Tag(name = "Address Book", description = "Address Book Controller")
 @RestController
 @RequestMapping(value = "/contacts")
-public class AddressBookResourceRestController {
+public class AddressBookController {
 
 	@Autowired
 	private ContactRepository contactRepository;

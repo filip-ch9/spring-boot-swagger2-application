@@ -5,7 +5,6 @@ import java.util.UUID;
 
 import org.springframework.data.cassandra.repository.AllowFiltering;
 import org.springframework.data.cassandra.repository.CassandraRepository;
-
 import com.swagger.practice.demo.application.model.Tutorial;
 
 public interface TutorialRepository extends CassandraRepository<Tutorial, UUID> {

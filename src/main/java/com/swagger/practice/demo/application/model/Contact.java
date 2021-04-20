@@ -13,6 +13,7 @@ import lombok.Data;
 @Data
 @Table(name = "contact")
 public class Contact {
+  
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
